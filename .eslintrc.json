@@ -1,0 +1,105 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"extends": ["plugin:@typescript-eslint/recommended", "react-app"],
+	"plugins": ["@typescript-eslint", "react"],
+	"rules": {
+		"@typescript-eslint/indent": ["error", "tab"],
+		"semi": ["error", "always"],
+		"eol-last": ["error", "always"],
+		"quotes": ["error", "single"],
+		"import/order": [
+			"error",
+			{
+				"groups": [["builtin", "external", "internal"]]
+			}
+		],
+		"import/newline-after-import": "error",
+		"import/no-webpack-loader-syntax": "off",
+		"default-case": [
+			"error",
+			{
+				"commentPattern": "^no default$"
+			}
+		],
+		"dot-notation": [
+			"error",
+			{
+				"allowKeywords": true
+			}
+		],
+		"no-alert": "warn",
+		"indent": "off",
+		"interface-name": [0, "never"],
+		"max-len": [
+			"error",
+			{
+				"code": 150
+			}
+		],
+		"no-trailing-spaces": [
+			"error",
+			{
+				"skipBlankLines": false,
+				"ignoreComments": false
+			}
+		],
+		"comma-dangle": [
+			"error",
+			{
+				"arrays": "always-multiline",
+				"objects": "always-multiline",
+				"imports": "always-multiline",
+				"exports": "always-multiline",
+				"functions": "always-multiline"
+			}
+		],
+		"comma-spacing": [
+			"error",
+			{
+				"before": false,
+				"after": true
+			}
+		],
+		"space-infix-ops": [
+			"error",
+			{
+				"int32Hint": false
+			}
+		],
+		"dot-location": ["error", "property"],
+		"no-implied-eval": ["error"],
+		"no-throw-literal": ["error"],
+		"no-return-await": ["error"],
+		"no-with": ["error"],
+		"array-element-newline": ["error", "consistent"],
+		"jsx-quotes": ["error", "prefer-double"],
+		"generator-star-spacing": ["error", "after"],
+		"unicode-bom": ["error", "never"],
+		"computed-property-spacing": ["error", "never"],
+		"object-curly-spacing": ["error", "always"],
+		"no-async-promise-executor": ["error"],
+		"no-dupe-class-members": "off",
+		"react/forbid-elements": [
+			"error",
+			{
+				"forbid": [
+					{
+						"element": "React.Fragment",
+						"message": "use <Fragment> instead"
+					}
+				]
+			}
+		],
+		"react/jsx-fragments": ["error", "element"],
+		"keyword-spacing": [
+			"error",
+			{
+				"after": true,
+				"before": true
+			}
+		],
+		"no-var": ["error"],
+		"array-bracket-spacing": ["error", "never"],
+		"@typescript-eslint/explicit-member-accessibility": "off"
+	}
+}

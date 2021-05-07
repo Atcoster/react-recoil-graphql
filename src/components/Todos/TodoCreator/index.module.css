@@ -1,0 +1,20 @@
+.creator {
+	display: flex;
+	padding-left: 40px;
+}
+
+.input {
+	width: 15%;
+	height: 40px;
+	border-radius: 4px;
+}
+
+.addButton {
+	background-color: #7abd91;
+	cursor: pointer;
+	width: 100px;
+	border-radius: 4px;
+	margin-left: 5px;
+	border: unset;
+	color: #fff;
+}

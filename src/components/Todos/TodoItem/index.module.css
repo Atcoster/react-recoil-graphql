@@ -1,0 +1,26 @@
+.item {
+	display: flex;
+	align-items: center;
+}
+
+.textInput {
+	padding: 4px;
+	width: 300px;
+}
+
+.checkBox {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.deleteButton {
+	width: 100px;
+	height: 25px;
+	cursor: pointer;
+	background-color: #ff6962;
+	border-radius: 4px;
+	border: unset;
+	color: #fff;
+	margin-left: 5px;
+}
