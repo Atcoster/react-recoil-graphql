@@ -5,7 +5,7 @@ export type TodoItemType = {
 };
 
 export enum FilteredTodo {
-	ALL = 'Show All',
-	COMPLETED = 'Show Completed',
-	UNCOMPLETED = 'Show UnCompleted',
+	ALL = 'All',
+	COMPLETED = 'Completed',
+	UNCOMPLETED = 'UnCompleted',
 }

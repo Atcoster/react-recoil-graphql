@@ -46,6 +46,7 @@ const TodoItem: FC<Props> = ({ item }) => {
 				value={item.text}
 				onChange={editItemText}
 				readOnly={item.isComplete}
+				style={{ backgroundColor: item.isComplete ? '#ddd' : '#fff' }}
 			/>
 			<button className={classes.deleteButton} onClick={deleteItem}>
 				Delete

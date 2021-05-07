@@ -1,4 +1,6 @@
 .items {
 	display: flex;
 	flex-direction: column;
+	padding-left: unset;
+	margin-top: 20px;
 }

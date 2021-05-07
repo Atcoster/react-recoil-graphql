@@ -1,0 +1,10 @@
+.filters {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+
+.select {
+	width: 20%;
+	height: 35px;
+}

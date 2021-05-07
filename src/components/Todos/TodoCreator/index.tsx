@@ -13,12 +13,12 @@ const TodoCreator: FC = () => {
 	const addItem = () => {
 		if (inputValue === '') return;
 		setTodoList((oldTodoList) => [
-			...oldTodoList,
 			{
 				id: uuidv4(),
 				text: inputValue,
 				isComplete: false,
 			},
+			...oldTodoList,
 		]);
 		setInputValue('');
 	};
@@ -27,9 +27,14 @@ const TodoCreator: FC = () => {
 		setInputValue(event.target.value);
 	};
 
+	const onKeyPressed = (event: React.KeyboardEvent<HTMLInputElement>) => {
+		if (event.key !== 'Enter') return;
+		addItem();
+	};
+
 	return (
 		<div className={classes.creator}>
-			<input className={classes.input} type="text" value={inputValue} onChange={onChange} />
+			<input className={classes.input} type="text" value={inputValue} onChange={onChange} onKeyPress={onKeyPressed} />
 			<button className={classes.addButton} onClick={addItem}>
 				Add
 			</button>

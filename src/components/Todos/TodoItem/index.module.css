@@ -6,6 +6,11 @@
 .textInput {
 	padding: 4px;
 	width: 300px;
+	border: unset;
+}
+
+.textInput:focus {
+	border: unset;
 }
 
 .checkBox {
@@ -15,7 +20,7 @@
 }
 
 .deleteButton {
-	width: 100px;
+	width: 60px;
 	height: 25px;
 	cursor: pointer;
 	background-color: #ff6962;

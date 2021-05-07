@@ -6,10 +6,13 @@ import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
 // import { DebugObserver, DebugButton, TimeTravelObserver } from './recoil/recoilDebugger';
 import './index.css';
+import TopBar from './components/TopBar';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<RecoilRoot>
+			<TopBar />
+
 			{/* <DebugObserver /> */}
 			{/* <DebugButton /> */}
 			{/* <TimeTravelObserver /> */}
