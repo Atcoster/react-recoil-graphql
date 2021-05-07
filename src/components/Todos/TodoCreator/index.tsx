@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { useSetRecoilState } from 'recoil';
 import { v4 as uuidv4 } from 'uuid';
-import { todoListState } from '../../../recoil/atoms/todoListState';
+import { todoListState } from '../../../recoil/atoms/todos';
 import { TodoItemType } from '../../../types/interfaces';
 import classes from './index.module.css';
 
@@ -11,6 +11,7 @@ const TodoCreator: FC = () => {
 	const setTodoList = useSetRecoilState<TodoItemType[]>(todoListState);
 
 	const addItem = () => {
+		if (inputValue === '') return;
 		setTodoList((oldTodoList) => [
 			...oldTodoList,
 			{

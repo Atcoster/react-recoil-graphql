@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { RecoilRoot } from 'recoil';
+import ReCoilizeDebugger from 'recoilize';
 import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
-import DebugObserver from './recoil/recoilDebugger';
+// import { DebugObserver, DebugButton, TimeTravelObserver } from './recoil/recoilDebugger';
 import './index.css';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<RecoilRoot>
-			<DebugObserver />
+			{/* <DebugObserver /> */}
+			{/* <DebugButton /> */}
+			{/* <TimeTravelObserver /> */}
+			<ReCoilizeDebugger />
 			<Home />
 		</RecoilRoot>
 	</React.StrictMode>,

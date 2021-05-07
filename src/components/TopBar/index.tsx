@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useRecoilValue } from 'recoil';
-import topBarState from '../../recoil/atoms/topBarState';
+import { topBarState } from '../../recoil/atoms/topBar';
 import classes from './index.module.css';
 
 const TopBar: FC = () => {

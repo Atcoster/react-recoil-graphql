@@ -29,7 +29,7 @@ export const filteredTodoListSelector = selector({
 
 		switch (filter) {
 			case FilteredTodo.COMPLETED:
-				return ;
+				return;
 			case FilteredTodo.UNCOMPLETED:
 				return list.filter((item) => !item.isComplete);
 			default:
