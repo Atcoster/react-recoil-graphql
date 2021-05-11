@@ -18,8 +18,8 @@ export const todoListFilterState = atom({
 	default: 'Show All',
 });
 
-export const allFakeTodosState = selector({
-	key: 'allUsersState',
+export const allFakeTodosSelector = selector({
+	key: 'allFakeTodosSelector',
 	get: async ({ get }) => {
 		try {
 			const response = await fetch('https://jsonplaceholder.typicode.com/posts');
