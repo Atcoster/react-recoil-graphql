@@ -1,12 +1,11 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { RecoilRoot } from 'recoil';
 import ReCoilizeDebugger from 'recoilize';
-import Home from './pages/Home';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { DebugObserver, DebugButton, TimeTravelObserver } from './recoil/recoilDebugger';
 import './index.css';
-import TopBar from './components/TopBar';
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -15,10 +14,7 @@ ReactDOM.render(
 			<DebugObserver />
 			{/* <DebugButton /> */}
 			{/* <TimeTravelObserver /> */}
-			<Suspense fallback={<div>Loading... </div>}>
-				<TopBar />
-				<Home />
-			</Suspense>
+			<App />
 		</RecoilRoot>
 	</React.StrictMode>,
 	document.getElementById('root'),
