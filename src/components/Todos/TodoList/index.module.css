@@ -4,3 +4,12 @@
 	padding-left: unset;
 	margin-top: 20px;
 }
+
+.stats {
+	margin-top: 10px;
+	display: flex;
+}
+
+.stats span {
+	flex: 1;
+}

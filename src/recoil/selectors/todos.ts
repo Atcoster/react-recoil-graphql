@@ -37,3 +37,33 @@ export const filteredTodoListSelector = selector({
 		}
 	},
 });
+
+export const todoListStatsSelector = selector({
+	key: 'todoListStatsSelector',
+	get: ({ get }) => {
+		const todoList = get(todoListState);
+		const totalNum = todoList.length;
+		const totalCompletedNum = get(completedTodoSelector).length;
+		const totalUncompletedNum = totalNum - totalCompletedNum; // OR get(unCompletedTodoSelector).length
+		const percentCompleted = totalNum === 0 ? 0 : (totalCompletedNum / totalNum) * 100;
+
+		return {
+			totalNum,
+			totalCompletedNum,
+			totalUncompletedNum,
+			percentCompleted,
+		};
+	},
+});
+
+export const sortTodoListByStatusSelector = selector({
+	key: 'sortTodoListByStatusSelector',
+	get: ({ get }) => {
+		const filteredTodos = get(filteredTodoListSelector);
+		const sortedTodos = [...filteredTodos].sort((a, b) => {
+			return Number(a.isComplete) - Number(b.isComplete);
+		});
+
+		return sortedTodos;
+	},
+});

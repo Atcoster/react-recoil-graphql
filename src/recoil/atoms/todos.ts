@@ -1,6 +1,6 @@
-import { atom } from 'recoil';
+import { atom, selector } from 'recoil';
 import { v4 as uuidv4 } from 'uuid';
-import { TodoItemType } from '../../types/interfaces';
+import { FakeTodoItemType, TodoItemType } from '../../types/interfaces';
 
 export const todoListState = atom<TodoItemType[]>({
 	key: 'todoListState',
@@ -16,4 +16,17 @@ export const todoListState = atom<TodoItemType[]>({
 export const todoListFilterState = atom({
 	key: 'todoListFilterState',
 	default: 'Show All',
+});
+
+export const allFakeTodosState = selector({
+	key: 'allUsersState',
+	get: async ({ get }) => {
+		try {
+			const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+			const data: FakeTodoItemType[] = await response.json();
+			return data;
+		} catch (error) {
+			throw error;
+		}
+	},
 });

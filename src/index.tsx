@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { RecoilRoot } from 'recoil';
 import ReCoilizeDebugger from 'recoilize';
 import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
-// import { DebugObserver, DebugButton, TimeTravelObserver } from './recoil/recoilDebugger';
+import { DebugObserver, DebugButton, TimeTravelObserver } from './recoil/recoilDebugger';
 import './index.css';
 import TopBar from './components/TopBar';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<RecoilRoot>
-			<TopBar />
-
-			{/* <DebugObserver /> */}
+			<ReCoilizeDebugger />
+			<DebugObserver />
 			{/* <DebugButton /> */}
 			{/* <TimeTravelObserver /> */}
-			<ReCoilizeDebugger />
-			<Home />
+			<Suspense fallback={<div>Loading... </div>}>
+				<TopBar />
+				<Home />
+			</Suspense>
 		</RecoilRoot>
 	</React.StrictMode>,
 	document.getElementById('root'),

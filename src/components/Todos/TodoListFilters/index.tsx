@@ -11,7 +11,6 @@ const TodoListFilters: FC = () => {
 		setFilter(event.target.value);
 	};
 
-	console.log(filter);
 	return (
 		<div className={classes.filters}>
 			<span>Filter:</span>

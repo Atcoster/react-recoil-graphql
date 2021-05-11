@@ -1,7 +1,8 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import TodoList from '../../components/Todos/TodoList';
 import TodoCreator from '../../components/Todos/TodoCreator';
 import TodoListFilters from '../../components/Todos/TodoListFilters';
+import FakeTodos from '../../components/Todos/FakeTodos';
 import classes from './index.module.css';
 
 const Home: FC = () => {
@@ -10,6 +11,8 @@ const Home: FC = () => {
 			<TodoCreator />
 			<TodoListFilters />
 			<TodoList />
+			<h2>Fake fetched todos</h2>
+			<FakeTodos />
 		</div>
 	);
 };
